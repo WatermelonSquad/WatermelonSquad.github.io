@@ -54,13 +54,8 @@
             watermelonImg.src = images[currentImageIndex];
         }
 
-        function autoChangeImage() {
-            setInterval(() => {
-                nextImage();
-            }, 500); // 10 seconds interval
-        }
-
-        autoChangeImage(); // Start the automatic transition
+        // Set an interval for every 10 seconds
+        setInterval(nextImage, 10000);
     </script>
 </body>
 </html>
