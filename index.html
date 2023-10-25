@@ -24,10 +24,35 @@
             height: auto;
             margin-top: 20px;
         }
+        .arrow {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <h1>This is a watermelon</h1>
-    <img src="watermelon.jpg.jfif" alt="Watermelon Image">
+    <div>
+        <img id="watermelonImg" src="watermelon.jpg.jfif" alt="Watermelon Image">
+    </div>
+    <div style="margin-top: 20px;">
+        <span class="arrow" onclick="previousImage()">&#8678;</span>
+        <span class="arrow" onclick="nextImage()">&#8680;</span>
+    </div>
+
+    <script>
+        const images = ['watermelon.jpg.jfif', 'sliced_watermelon.jfif']; // Add more image paths as needed
+        let currentImageIndex = 0;
+        const watermelonImg = document.getElementById('watermelonImg');
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            watermelonImg.src = images[currentImageIndex];
+        }
+
+        function previousImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            watermelonImg.src = images[currentImageIndex];
+        }
+    </script>
 </body>
 </html>
