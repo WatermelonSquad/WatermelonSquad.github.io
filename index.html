@@ -1,61 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Watermelon Website</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background-color: lightgrey;
-        }
-        h1 {
-            color: darkgreen;
-            font-size: 32px;
-        }
-        img {
-            width: 200px;
-            height: auto;
-            margin-top: 20px;
-        }
-        .arrow {
-            cursor: pointer;
-        }
-    </style>
+    <title>Homepage with PDF</title>
 </head>
 <body>
-    <h1>This is a watermelon</h1>
-    <div>
-        <img id="watermelonImg" src="watermelon.jpg.jfif" alt="Watermelon Image">
-    </div>
-    <div style="margin-top: 20px;">
-        <span class="arrow" onclick="previousImage()">&#8678;</span>
-        <span class="arrow" onclick="nextImage()">&#8680;</span>
-    </div>
-
-    <script>
-        const images = ['watermelon.jpg.jfif', 'sliced_watermelon.png']; // Make sure these paths are correct
-        let currentImageIndex = 0;
-        const watermelonImg = document.getElementById('watermelonImg');
-
-        function nextImage() {
-            currentImageIndex = (currentImageIndex + 1) % images.length;
-            watermelonImg.src = images[currentImageIndex];
-        }
-
-        function previousImage() {
-            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-            watermelonImg.src = images[currentImageIndex];
-        }
-
-        // Set an interval for every 10 seconds
-        setInterval(nextImage, 5000);
-    </script>
+    <h1>Welcome to Our Website</h1>
+    <p>Here is our embedded PDF:</p>
+    <iframe src="path_to_your_pdf_file.pdf" width="600" height="800" style="border: none;"></iframe>
 </body>
 </html>
