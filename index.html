@@ -15,9 +15,17 @@
         }
 
         .stl_title img {
-            width: 300px; /* Adjust the width as needed */
+            max-width: 100%;
+            height: auto;
             display: block;
             margin: 0 auto;
+        }
+
+        /* Adjust the size and position of the images below the title */
+        .stl_02 {
+            display: block;
+            text-align: center;
+            margin: 2em auto; /* Adjust the margin as needed */
         }
     </style>
 </head>
@@ -25,7 +33,7 @@
 <body>
     <!-- New code for the title image -->
     <div class="stl_title">
-        <img src="title.png" alt="Title" />
+        <img src="title.png" alt="Title" style="height: 25vh;" />
     </div>
 
     <!-- Existing code for the images -->
